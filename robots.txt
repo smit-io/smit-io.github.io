@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://smitchoksi.com/sitemap.xml
