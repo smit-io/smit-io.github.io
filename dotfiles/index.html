@@ -23,7 +23,7 @@ Each dot file in the ~/dotfiles/&lt;dotfile_name&gt; directory must have the sam
   <meta itemprop="description" content="Managing dot files using GNU stow It is really simple managing dotfiles using GNU stow.
 How it works Stow manages dot files using symbolic links. Create a dotfiles directory in $HOME directory to keep all the dotfiles to be managed by stow.
 Each dot file in the ~/dotfiles/&lt;dotfile_name&gt; directory must have the same directory structure as the dotfile from ~. For example, if .zshrc is in ~, then it must be located at ~/dotfiles/zsh/.zshrc.">
-  <meta itemprop="wordCount" content="447">
+  <meta itemprop="wordCount" content="484">
   <meta itemprop="keywords" content="Docs,Guide">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Dot files">
@@ -193,6 +193,12 @@ Each dot file in the ~/dotfiles/&lt;dotfile_name&gt; directory must have the sam
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
               >TL;DR</a>
             </li>
+          <li>
+              <a
+                href="#step-by-step-guide"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Step By Step Guide</a>
+            </li>
           </ul>
   </li>
           <li class="open"><a
@@ -357,6 +363,10 @@ Each dot file in the ~/dotfiles/&lt;dotfile_name&gt; directory must have the sam
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-semibold hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#step-by-step-guide">Step By Step Guide
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#install-stow">Install stow
         </a>
       </li>
@@ -433,7 +443,7 @@ if <code>.zshrc</code> is in <code>~</code>, then it must be located at <code>~/
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">mv ~/.zshrc ~/dotfiles/zsh
 </span></span><span class="line"><span class="cl">mv ~/.tmux.conf ~/dotfiles/tmux
-</span></span><span class="line"><span class="cl">mv ~/.p10k.conf ~/p10k/.p10k.conf
+</span></span><span class="line"><span class="cl">mv ~/.p10k.conf ~/p10k
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/dotfiles
 </span></span><span class="line"><span class="cl">
@@ -460,6 +470,8 @@ if <code>.zshrc</code> is in <code>~</code>, then it must be located at <code>~/
   </button>
 </div>
 </div>
+<h2>Step By Step Guide<span class="hx:absolute hx:-mt-20" id="step-by-step-guide"></span>
+    <a href="#step-by-step-guide" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><hr>
 <div class="steps hx:ml-4 hx:mb-12 hx:ltr:border-l hx:rtl:border-r hx:border-gray-200 hx:ltr:pl-6 hx:rtl:pr-6 hx:dark:border-neutral-800 [counter-reset:step]">
 <h3>Install stow<span class="hx:absolute hx:-mt-20" id="install-stow"></span>
     <a href="#install-stow" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Download and install GNU stow.</p>
@@ -534,13 +546,13 @@ if <code>.zshrc</code> is in <code>~</code>, then it must be located at <code>~/
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cp ~/.tmux.conf ~/.tmux.conf.backup
-</span></span><span class="line"><span class="cl">mv ~/.tmux.conf ~/dotfiles/tmux/.tmux.conf
+</span></span><span class="line"><span class="cl">mv ~/.tmux.conf ~/dotfiles/tmux
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">cp ~/.p10k.zsh ~/.p10k.zsh.backup
-</span></span><span class="line"><span class="cl">mv ~/.p10k.zsh ~/dotfiles/p10k/.p10k.zsh
+</span></span><span class="line"><span class="cl">mv ~/.p10k.zsh ~/dotfiles/p10k
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">cp ~/.tmux.conf ~/.tmux.conf.backup
-</span></span><span class="line"><span class="cl">mv ~/.tmux.conf ~/dotfiles/tmux/tmux.conf</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</span></span><span class="line"><span class="cl">mv ~/.tmux.conf ~/dotfiles/tmux</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -604,6 +616,10 @@ if <code>.zshrc</code> is in <code>~</code>, then it must be located at <code>~/
   <span class="hx:inline-flex hx:cursor-default hx:items-center hx:py-1"><svg width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg><span class="hx:ltr:ml-1 hx:rtl:mr-1">.stow-local-ignore</span>
   </span>
 </li>
+<li class="hx:flex hx:list-none">
+  <span class="hx:inline-flex hx:cursor-default hx:items-center hx:py-1"><svg width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg><span class="hx:ltr:ml-1 hx:rtl:mr-1">.stow-global-ignore</span>
+  </span>
+</li>
 </ul>
 </li>
 </div>
@@ -641,7 +657,13 @@ if <code>.zshrc</code> is in <code>~</code>, then it must be located at <code>~/
 </div>
 </div>
 <h3>Add files and directories to <code>.stow-local-ignore</code> and <code>.stow-global-ignore</code><span class="hx:absolute hx:-mt-20" id="add-files-and-directories-to-stow-local-ignore-and-stow-global-ignore"></span>
-    <a href="#add-files-and-directories-to-stow-local-ignore-and-stow-global-ignore" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>.stow-local-ignore</code> file is like a <code>.gitignore</code> file for stow. <code>.stow-local-ignore</code> ignores per package (directory) and <code>.stow-global-ignore</code> ignores files and directories globally.</p>
+    <a href="#add-files-and-directories-to-stow-local-ignore-and-stow-global-ignore" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-orange-100 hx:bg-orange-50 hx:text-orange-800 hx:dark:border-orange-400/30 hx:dark:bg-orange-400/20 hx:dark:text-orange-300">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><div class="hx:select-none hx:text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">❓</div></div>
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">Add any files or directories that you want to ignore in the <code>.stow-local-ignore</code> and <code>.stow-global-ignore</code> files. For example, you can add <code>.git</code> to <code>.stow-local-ignore</code> so that stow ignores the git directory.</div>
+  </div>
+</div>
+<p><code>.stow-local-ignore</code> file is like a <code>.gitignore</code> file for stow. <code>.stow-local-ignore</code> ignores per package (directory) and <code>.stow-global-ignore</code> ignores files and directories globally.</p>
 <p>We will add <code>.git</code> to <code>.stow-local-ignore</code> so the stow ignores that directory.</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
@@ -678,7 +700,11 @@ if <code>.zshrc</code> is in <code>~</code>, then it must be located at <code>~/
         href="/"
         title="Documentation"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Documentation</a></div>
+      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Documentation</a><a
+        href="/restic/"
+        title="Restic Backups"
+        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
+      >Restic Backups<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>
