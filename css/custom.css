@@ -249,76 +249,110 @@
   font-weight: 300;
 }
 
-/* Custom Code Block Styling with Fira Code Font */
-.hextra-code-block {
-  @apply hx:text-[.9em] hx:leading-5;
-}
+/* Import custom highlight styles */
+@import "./highlight.css";
 
-/* Ensure Fira Code is applied to all code elements with higher specificity */
-.hextra-code-block pre,
-.hextra-code-block pre code,
-.hextra-code-block code,
-.hextra-code-block .filename,
-.chroma pre,
 .chroma .ln,
-.chroma .lnt,
-.chroma .hl,
-.hextra-code-block div pre,
-.hextra-code-block div code {
-  font-family: 'Fira Code', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
-  font-feature-settings: 'liga' 1, 'calt' 1 !important;
-  font-variant-ligatures: contextual !important;
+.chroma .lnt {
+  padding: 0 16px;
+  min-width: 3rem;
+  color: #6a737d;
+  font-family: 'Fira Code', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  user-select: none;
 }
 
-.hextra-code-block pre {
-  @apply hx:text-[.9em] hx:bg-primary-700/5 hx:overflow-x-auto hx:subpixel-antialiased hx:dark:bg-primary-300/10 hx:contrast-more:border hx:contrast-more:border-primary-900/20 hx:contrast-more:contrast-150 hx:contrast-more:dark:border-primary-100/40;
-  font-family: 'Fira Code', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
-  font-feature-settings: 'liga' 1, 'calt' 1 !important;
-  font-variant-ligatures: contextual !important;
-  font-weight: 500 !important;
+.dark .chroma .ln,
+.dark .chroma .lnt {
+  color: #484f58;
 }
 
-.hextra-code-block .filename {
-  @apply hx:absolute hx:top-0 hx:z-[1] hx:w-full hx:truncate hx:rounded-t-xl hx:bg-primary-700/5 hx:py-2 hx:px-4 hx:text-xs hx:text-gray-700 hx:dark:bg-primary-300/10 hx:dark:text-gray-200;
-  font-family: 'Fira Code', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
+.chroma .lntd {
+  padding: 0;
+  vertical-align: top;
 }
 
-.hextra-code-block .filename + pre:not(.lntable pre) {
-  /* Override padding for code blocks with filename but no highlight */
-  @apply hx:pt-12;
+.chroma .lntd:last-of-type {
+  width: 100%;
 }
 
-.hextra-code-block pre:not(.lntable pre) {
-  @apply hx:px-4 hx:mb-4 hx:py-4 hx:rounded-xl;
+/* Line highlighting */
+.chroma .hl {
+  display: block;
+  width: 100%;
+  background: rgba(56, 139, 253, 0.1);
 }
 
-.hextra-code-block div:nth-of-type(2) pre {
-  @apply hx:pt-12 hx:pb-4;
+.dark .chroma .hl {
+  background: rgba(56, 139, 253, 0.15);
 }
 
-.chroma {
-  .lntable {
-    @apply hx:m-0 hx:block hx:w-auto hx:overflow-auto hx:rounded-xl;
+/* Copy button styling */
+.hextra-code-block .copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 20;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #586069;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
 
-    pre {
-      @apply hx:pt-4 hx:pb-4;
-      font-family: 'Fira Code', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
-    }
-  }
-  .ln,
-  .lnt:not(.hl > .lnt),
-  .hl:not(.line) {
-    @apply hx:pl-4 hx:pr-4 hx:min-w-[2.6rem] hx:text-neutral-600 hx:dark:text-neutral-300;
-    font-family: 'Fira Code', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
-  }
-  .lntd {
-    @apply hx:p-0 hx:align-top;
-  }
-  .lntd:last-of-type {
-    @apply hx:w-full;
-  }
-  /* LineHighlight */
-  .hl {
-    @apply hx:block hx:w-full hx:bg-primary-800/10;
-  }
+.dark .hextra-code-block .copy-button {
+  background: rgba(22, 27, 34, 0.8);
+  border-color: #30363d;
+  color: #8b949e;
+}
+
+.hextra-code-block .copy-button:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #d0d7de;
+}
+
+.dark .hextra-code-block .copy-button:hover {
+  background: rgba(22, 27, 34, 0.95);
+  border-color: #484f58;
+}
+
+/* Inline code styling */
+.content :where(code):not(:where(.hextra-code-block code, [class~=not-prose],[class~=not-prose] *)) {
+  background: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: 'Fira Code', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 13px;
+  color: #24292e;
+}
+
+.dark .content :where(code):not(:where(.hextra-code-block code, [class~=not-prose],[class~=not-prose] *)) {
+  background: #161b22;
+  border-color: #30363d;
+  color: #c9d1d9;
+}
+
+/* Regular prose code blocks (not syntax highlighted) */
+.content :where(pre):not(:where(.hextra-code-block pre, [class~=not-prose],[class~=not-prose] *)) {
+  background: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  font-family: 'Fira Code', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #24292e;
+}
+
+.dark .content :where(pre):not(:where(.hextra-code-block pre, [class~=not-prose],[class~=not-prose] *)) {
+  background: #0d1117;
+  border-color: #30363d;
+  color: #c9d1d9;
 }
