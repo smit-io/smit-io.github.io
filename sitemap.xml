@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://smitchoksi.com/docs/dotfiles/</loc>
+    <loc>http://localhost:1313/docs/dotfiles/</loc>
   </url><url>
-    <loc>https://smitchoksi.com/docs/restic/installation/</loc>
+    <loc>http://localhost:1313/docs/restic/installation/</loc>
   </url><url>
-    <loc>https://smitchoksi.com/docs/restic/backingup/</loc>
+    <loc>http://localhost:1313/docs/restic/backingup/</loc>
   </url><url>
-    <loc>https://smitchoksi.com/docs/restic/</loc>
+    <loc>http://localhost:1313/docs/restic/</loc>
   </url><url>
-    <loc>https://smitchoksi.com/docs/restic/snapshots/</loc>
+    <loc>http://localhost:1313/docs/restic/snapshots/</loc>
   </url><url>
-    <loc>https://smitchoksi.com/docs/restic/restore/</loc>
+    <loc>http://localhost:1313/docs/restic/restore/</loc>
   </url><url>
-    <loc>https://smitchoksi.com/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://smitchoksi.com/docs/</loc>
+    <loc>http://localhost:1313/docs/</loc>
   </url><url>
-    <loc>https://smitchoksi.com/tags/docs/</loc>
+    <loc>http://localhost:1313/tags/docs/</loc>
   </url><url>
-    <loc>https://smitchoksi.com/test-font/</loc>
+    <loc>http://localhost:1313/test-font/</loc>
   </url><url>
-    <loc>https://smitchoksi.com/tags/guide/</loc>
+    <loc>http://localhost:1313/tags/guide/</loc>
   </url><url>
-    <loc>https://smitchoksi.com/</loc>
+    <loc>http://localhost:1313/</loc>
   </url><url>
-    <loc>https://smitchoksi.com/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

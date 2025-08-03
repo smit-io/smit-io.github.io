@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Smit Choksi – Docs</title>
-    <link>https://smitchoksi.com/tags/docs/</link>
+    <link>http://localhost:1313/tags/docs/</link>
     <description>Recent content in Docs on Smit Choksi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://smitchoksi.com/tags/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/tags/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Dot files</title>
-      <link>https://smitchoksi.com/docs/dotfiles/</link>
+      <link>http://localhost:1313/docs/dotfiles/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://smitchoksi.com/docs/dotfiles/</guid>
+      <guid>http://localhost:1313/docs/dotfiles/</guid>
       <description>
         
         
