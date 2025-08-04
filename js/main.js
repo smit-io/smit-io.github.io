@@ -186,9 +186,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Handle synced tabs (with data-tab-group)
-  const syncedGroups = document.querySelectorAll('[data-tab-group]');
-  syncedGroups.forEach((group) => {
+  const groups = document.querySelectorAll('[data-tab-group]');
+
+  groups.forEach((group) => {
     const key = encodeURIComponent(group.dataset.tabGroup);
     const saved = localStorage.getItem('hextra-tab-' + key);
     if (saved !== null) {
@@ -196,26 +196,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Handle all tab toggles (both synced and non-synced)
   document.querySelectorAll('.hextra-tabs-toggle').forEach((button) => {
     button.addEventListener('click', function (e) {
       const container = e.target.parentElement;
       const index = Array.from(container.querySelectorAll('.hextra-tabs-toggle')).indexOf(
         e.target
       );
-      
-      // Check if this is a synced tab group
-      if (container.dataset.tabGroup) {
-        const key = encodeURIComponent(container.dataset.tabGroup);
-        // Sync all tabs with the same group name
-        document
-          .querySelectorAll('[data-tab-group="' + container.dataset.tabGroup + '"]')
-          .forEach((grp) => updateGroup(grp, index));
-        // Save to localStorage
+      const key = encodeURIComponent(container.dataset.tabGroup);
+      document
+        .querySelectorAll('[data-tab-group="' + container.dataset.tabGroup + '"]')
+        .forEach((grp) => updateGroup(grp, index));
+      if (key) {
         localStorage.setItem('hextra-tab-' + key, index.toString());
-      } else {
-        // Handle individual tab group (no sync)
-        updateGroup(container, index);
       }
     });
   });
