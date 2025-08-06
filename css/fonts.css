@@ -1,0 +1,32 @@
+/* Google Fonts Configuration */
+
+/* Font variables - these will be overridden by variables.css if fonts are enabled */
+/* :root {
+  --font-heading: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-code: "JetBrains Mono", ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+} */
+
+/* Apply fonts to elements */
+html {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+pre, code, kbd, samp {
+  font-family: var(--font-code);
+}
+
+/* Code blocks */
+.hextra-code-block pre,
+.hextra-code-block code {
+  font-family: var(--font-code);
+}
+
+/* Inline code */
+:not(pre) > code {
+  font-family: var(--font-code);
+} 

@@ -6,6 +6,11 @@
   --hextra-max-page-width: 90rem;
   --hextra-max-navbar-width: 80rem;
   --hextra-max-footer-width: 80rem;
+  
+  /* Font variables */
+  --font-heading: "Sora", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: "Mozilla Text", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-code: "Google Sans Code", ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
 }
 
 .hextra-max-page-width {

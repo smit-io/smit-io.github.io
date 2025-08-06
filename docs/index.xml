@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Smit Choksi – Introduction</title>
-    <link>http://localhost:1313/docs/</link>
+    <link>https://smitchoksi.com/docs/</link>
     <description>Recent content in Introduction on Smit Choksi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://smitchoksi.com/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Restic Installation</title>
-      <link>http://localhost:1313/docs/restic/installation/</link>
+      <link>https://smitchoksi.com/docs/restic/installation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/restic/installation/</guid>
+      <guid>https://smitchoksi.com/docs/restic/installation/</guid>
       <description>
         
         
@@ -59,10 +59,10 @@
     
     <item>
       <title>Backing Up With Restic</title>
-      <link>http://localhost:1313/docs/restic/backingup/</link>
+      <link>https://smitchoksi.com/docs/restic/backingup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/restic/backingup/</guid>
+      <guid>https://smitchoksi.com/docs/restic/backingup/</guid>
       <description>
         
         
@@ -156,10 +156,10 @@
     
     <item>
       <title>Snapshots</title>
-      <link>http://localhost:1313/docs/restic/snapshots/</link>
+      <link>https://smitchoksi.com/docs/restic/snapshots/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/restic/snapshots/</guid>
+      <guid>https://smitchoksi.com/docs/restic/snapshots/</guid>
       <description>
         
         
@@ -339,10 +339,10 @@ You can define forget policies in a configuration file or use command-line optio
     
     <item>
       <title>Restore Files with Restic</title>
-      <link>http://localhost:1313/docs/restic/restore/</link>
+      <link>https://smitchoksi.com/docs/restic/restore/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/restic/restore/</guid>
+      <guid>https://smitchoksi.com/docs/restic/restore/</guid>
       <description>
         
         
