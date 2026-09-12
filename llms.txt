@@ -1,0 +1,23 @@
+# Smit Choksi
+
+> 
+
+
+## Introduction
+
+### Dot files
+
+### Restic Backups
+- [Restic Installation](https://smitchoksi.com/docs/restic/installation/): Install Restic on Ubuntu Before using restic, it must be installed and updated. As many times the …
+- [Backing Up With Restic](https://smitchoksi.com/docs/restic/backingup/): Use --dry-run to see what files would be restored without actually restoring them. Backing Up With …
+- [Snapshots](https://smitchoksi.com/docs/restic/snapshots/): Browse the snapshots of the repository Use --dry-run to see what files would be restored without …
+- [Restore Files with Restic](https://smitchoksi.com/docs/restic/restore/): Restore Files with Restic To restore files from a restic repository, you can use the restore …
+
+### Managing Multiple Gits and Github Accounts
+
+### How This Site Is Published
+
+
+---
+Generated on 2026-09-12 09:14:57 UTC
+Site: https://smitchoksi.com/
